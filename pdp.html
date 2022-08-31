@@ -1,0 +1,622 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Product Detailed Page</title>
+
+    <!-- Link Fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/0d17482471.js"
+      crossorigin="anonymous"
+    ></script>
+
+    <!-- Link user styles -->
+    <link rel="stylesheet" href="./css/pdp.css" />
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Cookies -->
+    <div class="cookie-consent-modal">
+      <div class="content">
+        <h6>This website uses cookies</h6>
+        <p>
+          OSF uses its own and third-party cookies for statistical purposes, to
+          know your preferences, for website performance and interaction with
+          social media offering publicity tailored to your interests. If you
+          continue browsing, we consider that you accept its use.<br />
+          You can expand this information consulting our
+          <a href="#">Cookies Policy Page</a>.
+          <span id="close-cookies"><i class="fas fa-times"></i></span>
+        </p>
+        <button class="btn accept">accept</button>
+      </div>
+    </div>
+    <script src="./js/cookies.js"></script>
+
+	<!-- // Cookies -->
+
+    <!-- Sign In modal -->
+    <form id="signinForm">
+      <h3>Sign in</h3>
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        required
+      />
+
+      <div class="forgot">
+        <label for="password">Password</label>
+        <a href="#">forgot password</a>
+      </div>
+      <div class="password">
+        <span class="showPassword">
+          <i class="far fa-eye"></i>
+        </span>
+        <!-- At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character -->
+        <input
+          type="password"
+          name="password"
+          pattern="(?=.*\d)(?=.*[!#$%&'()*+,-./:;<=>?@[\]^_`{|}~])(?=.*[A-Z]).{6,}"
+          required
+        />
+      </div>
+
+      <input type="submit" value="Login" id="login" />
+      <a href="#" class="register">I don't have an account</a>
+    </form>
+
+	<!-- // Sign In modal -->
+
+    <!-- Header -->
+    <header>
+      <div class="wrapper">
+        <button id="hamburger">
+          <span class="open active">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="close">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+
+        <a href="./index.html" class="logo">
+          <img src="./img/home/logo.png" alt="logo" />
+          <div>
+            <h1>OSF</h1>
+            <h2>Academy</h2>
+          </div>
+        </a>
+
+        <nav>
+          <ul class="nav-main">
+            <li class="menu-open">
+              <h2>Services</h2>
+              <!-- Menu -->
+              <div class="menu">
+                <div class="wrapper">
+                  <div class="prod-cat">
+                    <h3>
+                      PRODUCT CATEGORIES
+                      <span class="arrow-down">&#9660;</span>
+                    </h3>
+                    <div>
+                      <ul>
+                        <li><a href="./404.html">Accessories</a></li>
+                        <li><a href="./404.html">Alcohol</a></li>
+                        <li><a href="./404.html">Art</a></li>
+                        <li><a href="./404.html">Books</a></li>
+                        <li><a href="./404.html">Drink</a></li>
+                        <li><a href="./404.html">Electronics</a></li>
+                        <li><a href="./404.html">Flowers & Plants</a></li>
+                        <li><a href="./404.html">Food</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="./404.html">Gadgets</a></li>
+                        <li><a href="./404.html">Garden</a></li>
+                        <li><a href="./404.html">Grocery</a></li>
+                        <li><a href="./404.html">Home</a></li>
+                        <li><a href="./404.html">Jewerly</a></li>
+                        <li><a href="./404.html">Kids & Baby</a></li>
+                        <li><a href="./404.html">Men's Fashion</a></li>
+                        <li><a href="./404.html">Mobile</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="./404.html">Motorcycles</a></li>
+                        <li><a href="./404.html">Movies</a></li>
+                        <li><a href="./404.html">Music</a></li>
+                        <li><a href="./404.html">Office</a></li>
+                        <li><a href="./404.html">Pets</a></li>
+                        <li><a href="./404.html">Romantic</a></li>
+                        <li><a href="./404.html">Sport</a></li>
+                        <li><a href="./404.html">Toys</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sale">
+                    <h3>
+                      SALE
+                      <span class="arrow-down">&#9660;</span>
+                    </h3>
+                    <ul>
+                      <li><a href="./404.html">Accessories</a></li>
+                      <li><a href="./404.html">Alcohol</a></li>
+                      <li><a href="./404.html">Art</a></li>
+                      <li><a href="./404.html">Books</a></li>
+                      <li><a href="./404.html">Drink</a></li>
+                      <li><a href="./404.html">Electronics</a></li>
+                      <li><a href="./404.html">Flowers & Plants</a></li>
+                      <li><a href="./404.html">Food</a></li>
+                    </ul>
+                  </div>
+                  <img src="img/home/navbanner.png" alt="navbanner" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Company</h2>
+            </li>
+            <li>
+              <h2>Library</h2>
+            </li>
+            <li>
+              <h2>Contact Us</h2>
+            </li>
+          </ul>
+
+          <li class="options">
+            <select name="" id="">
+              <option value="">EN</option>
+              <option value="">FR</option>
+              <option value="">UA</option>
+            </select>
+
+            <select name="" id="">
+              <option value="">$US</option>
+              <option value="">EUR</option>
+              <option value="">UAH</option>
+            </select>
+          </li>
+
+          <ul class="nav-manage">
+            <li>
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </li>
+            <li>
+              <button id="openSignin">
+                <i class="fa-regular fa-user"></i>
+              </button>
+            </li>
+            <li>
+              <button id="wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span id="wishlistAmount">0</span>
+              </button>
+            </li>
+            <li>
+              <a href="./cart.html" id="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span id="cartAmount">0</span>
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main>
+      <!-- Breadcrumbs -->
+      <section class="breadcrumbs">
+        <div class="wrapper">
+          <ul>
+            <li><a href="./index.html">Home</a></li>
+            <li>/</li>
+            <li><a href="#">OSF Theme</a></li>
+            <li>/</li>
+            <li>Ruffle Front V-Neck Cardigan</li>
+          </ul>
+          <h2>Ruffle Front V-Neck Cardigan</h2>
+        </div>
+      </section>
+	  <!-- // Breadcrumbs -->
+
+      <!-- Product -->
+      <section class="product">
+        <div class="wrapper">
+          <div class="sub-wrapper">
+            <!-- View product -->
+            <div class="overview">
+              <i class="fas fa-expand-arrows-alt"></i>
+              <div class="large">
+                <img
+                  class="active"
+                  src="img/pdp/product/black-front.jpg"
+                  alt="black-front"
+                />
+                <img src="img/pdp/product/black-back.jpg" alt="black-back" />
+                <img src="img/pdp/product/aqua-front.jpg" alt="aqua-front" />
+                <img src="img/pdp/product/aqua-back.jpg" alt="aqua-back" />
+              </div>
+              <div class="small">
+                <img
+                  class="active"
+                  src="img/pdp/product/black-front.jpg"
+                  alt="black-front"
+                  class="active"
+                />
+                <img src="img/pdp/product/black-back.jpg" alt="black-back" />
+                <img src="img/pdp/product/aqua-front.jpg" alt="aqua-front" />
+                <img src="img/pdp/product/aqua-back.jpg" alt="aqua-back" />
+              </div>
+
+              <ul class="future-dots" id="images"></ul>
+
+              <div class="about">
+                <span class="price">$299.99</span>
+                <div class="colorpick">
+                  <ul>
+                    <li class="active" style="background-color: #585d61"></li>
+                    <li style="background-color: aqua"></li>
+                    <li style="background-color: #80ad1a"></li>
+                    <li style="background-color: red"></li>
+                    <li style="background-color: #355b97"></li>
+                  </ul>
+                  <select name="colorpick">
+                    <option value="Dark Gray">Dark Gray</option>
+                    <option value="Aqua">Aqua</option>
+                    <option value="Green">Green</option>
+                    <option value="Red">Red</option>
+                    <option value="Dark Blue">Dark Blue</option>
+                  </select>
+                </div>
+                <div class="add">
+                  <div class="amountpick">
+                    <button class="minus">-</button>
+                    <input type="number" name="amountpick" />
+                    <button class="plus">+</button>
+                  </div>
+                  <button id="addThisItem">Add to cart</button>
+                </div>
+                <p>
+                  Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+                  accusantium doloremque laudantium, totam rem aperiam, eaque
+                  ipsa quae ab illo inventore Beatae vitae dicta sunt explicabo.
+                  Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut
+                  odit aut fugit, sed quia consequuntur magni dolores eos qui
+                  ratione voluptatem sequi nesciunt. Neque porro quisquam est,
+                  qui dolorem ipsum quia dolor sit amet, consectetur, adipisci
+                  velit, sed quia non numquam eius modi tempora incidunt ut
+                  labore et dolore magnam aliquam quaerat voluptatem. Ut enim ad
+                  minima veniam, quis nostrum exercitationem ullam corporis
+                  suscipit laboriosam, nisi ut aliquid ex ea commodi
+                  consequatur? Quis autem vel eum iure reprehenderit qui in ea
+                  voluptate velit esse quam nihil molestiae consequatur, vel
+                  illum qui dolorem eum fugiat quo voluptas nulla pariatur?
+                </p>
+                <div class="share">
+                  <button id="print">Print Page</button>
+                  <span>Share</span>
+                  <ul>
+                    <li>
+                      <a href="https://www.facebook.com">
+                        <i class="fab fa-facebook-f"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.google.com">
+                        <i class="fab fa-google-plus-g"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://twitter.com">
+                        <i class="fab fa-twitter"></i>
+                      </a>
+                    </li>
+                    <li>
+                      <a href="https://www.pinterest.ca">
+                        <i class="fab fa-pinterest-p"></i>
+                      </a>
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+
+            <!-- Tabs -->
+            <div class="info">
+              <ul>
+                <li class="active">Description</li>
+                <li>Additional information</li>
+                <li>Reviews (3)</li>
+              </ul>
+              <div class="tab-box">
+                <!-- Tab 1 -->
+                <div class="tab active">
+                  <p>
+                    Aenean commodo ligula eget dolor. Aenean massa. Cum sociis
+                    natoque penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                  </p>
+                  <p>
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes, nascetur ridiculus mus. Donec quam felis, ultricies
+                    nec, pellentesque eu, pretium quis, sem. Nulla consequat
+                    massa quis enim. Donec pede justo, fringilla vel, aliquet
+                    nec, vulputate eget, arcu.
+                  </p>
+                </div>
+                <!-- Tab 2 -->
+                <div class="tab">
+                  <p>
+                    Commodo ligula eget dolor. Aenean massa. Cum sociis natoque
+                    penatibus et magnis dis parturient montes, nascetur
+                    ridiculus mus. Lorem ipsum dolor sit amet consectetur.
+                    adipisicing elit. Accusantium explicabo quos isle ea amet
+                    repellendus aliquam voluptatum enim laudantium nesciunt.
+                  </p>
+                  <p>
+                    Cum sociis natoque penatibus et magnis dis parturient
+                    montes. nascetur ridiculus mus. Donec quam fells, ultricies
+                    nee, pellentesque eu, pretium quis. sem. Nulla consequat.
+                  </p>
+                  <p>
+                    Lorem ipsum dolor sit amet, consectetuer adipiscing elit.
+                    Aenean commodo ligula eget dolor. Aenean massa.
+                  </p>
+                </div>
+                <!-- Tab 3 -->
+                <div class="tab">
+                  <p>
+                    1. Lorem ipsum dolor sit amet, consectetuer adipiscing.
+                    <br />
+                    2. Aenean commodo ligula eget dolor. Aenean massa. <br />
+                    3. Cum sociis natoque penatibus et magnis dis parturient
+                    montes.
+                  </p>
+
+                  <p></p>
+                </div>
+              </div>
+            </div>
+
+			<!-- // Tabs -->
+
+          </div>
+        </div>
+      </section>
+	  <!-- // Product -->
+
+      <!-- Popular Items -->
+      <section class="pop-items">
+        <div class="wrapper">
+          <h2>Popular items</h2>
+          <div class="items">
+            <!-- ---------- Row 1 ---------- -->
+            <div class="item">
+              <div
+                class="img"
+                style="background-image: url(img/pdp/pop-items/item1.jpg)"
+              ></div>
+              <h4 class="name">Kristina Dam Oak Table With White Marble Top</h4>
+              <span>$ 799.55</span>
+              <div class="overlay">
+                <button class="addToCart">
+                  <img src="img/icons/plus.svg" alt="plus" />
+                </button>
+                <button class="addToWishlist">
+                  <img src="img/icons/heart-filled.svg" alt="like" />
+                </button>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="img"
+                style="background-image: url(img/pdp/pop-items/item2.jpg)"
+              ></div>
+              <h4 class="name">Kristina Dam Oak Table With White Marble Top</h4>
+              <span>$ 2195.00</span>
+              <div class="overlay">
+                <button class="addToCart">
+                  <img src="img/icons/plus.svg" alt="plus" />
+                </button>
+                <button class="addToWishlist">
+                  <img src="img/icons/heart-filled.svg" alt="like" />
+                </button>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="img"
+                style="background-image: url(img/pdp/pop-items/item3.jpg)"
+              ></div>
+              <h4 class="name">Activate Facial Mask and Charcoal Soap</h4>
+              <span>$ 129.55</span>
+              <div class="overlay">
+                <button class="addToCart">
+                  <img src="img/icons/plus.svg" alt="plus" />
+                </button>
+                <button class="addToWishlist">
+                  <img src="img/icons/heart-filled.svg" alt="like" />
+                </button>
+              </div>
+            </div>
+            <div class="item">
+              <div
+                class="img"
+                style="background-image: url(img/pdp/pop-items/item4.jpg)"
+              ></div>
+              <h4 class="name">Cocktail Table Walnut | <br />YES</h4>
+              <span>$ 629.99</span>
+              <div class="overlay">
+                <button class="addToCart">
+                  <img src="img/icons/plus.svg" alt="plus" />
+                </button>
+                <button class="addToWishlist">
+                  <img src="img/icons/heart-filled.svg" alt="like" />
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <ul class="future-dots" id="popular"></ul>
+
+          <a href="#" class="toTop">Scroll to top</a>
+        </div>
+      </section>
+	  <!-- // Popular Items -->
+
+      <!-- Benefits -->
+      <section class="benefits">
+        <div class="wrapper">
+          <div class="card">
+            <img src="img/home/benefits/delivery.svg" alt="delivery" />
+            <div class="info">
+              <h4>Focus</h4>
+              <p>
+                Our unwavering focus on superior service delivery and building
+                next generation competencies
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/home/benefits/recycle.svg" alt="recycle" />
+            <div class="info">
+              <h4>Method</h4>
+              <p>
+                A standardized methodology designed to deliver measurable
+                business results and predictable costs
+              </p>
+            </div>
+          </div>
+          <div class="card">
+            <img src="img/home/benefits/clipboard.svg" alt="clipboard" />
+            <div class="info">
+              <h4>Knowledge</h4>
+              <p>
+                A highly skilled, proactive workforce that reliably improves
+                each client’s ROI while mitigating their business risk
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+	  <!-- // Benefits -->
+
+    </main>
+	<!-- // Main -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrapper">
+        <div class="contact">
+          <span
+            >© Copyright <span id="year"></span>.<br />
+            All Rights Reserved.<br />
+            <a href="./release.html">Release Date</a>
+          </span>
+          <h3>
+            Contact
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <ul class="contact-menu">
+            <li>
+              Headquarters:<br />
+              5600, Blvd. des Galeries, Bur 530 Québec, Québec G2K 2H6
+            </li>
+            <li>
+              <a href="mailto:contact@osf-global.com">contact@osf-global.com</a>
+            </li>
+            <li><a href="tel:+1-888-548-4344">+1 (888) 548-4344</a></li>
+          </ul>
+        </div>
+        <div class="categories">
+          <h3>
+            Categories
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <div class="categories-menu">
+            <ul>
+              <li><a href="./404.html">Alcohol</a></li>
+              <li><a href="./404.html">Art</a></li>
+              <li><a href="./404.html">Books</a></li>
+              <li><a href="./404.html">Drink</a></li>
+              <li><a href="./404.html">Electronics</a></li>
+            </ul>
+            <ul>
+              <li><a href="./404.html">Home</a></li>
+              <li><a href="./404.html">Jewerly</a></li>
+              <li><a href="./404.html">Kids & Baby</a></li>
+              <li><a href="./404.html">Men's Fashion</a></li>
+              <li><a href="./404.html">Mobile</a></li>
+              <li><a href="./404.html">Motorcycles</a></li>
+              <li><a href="./404.html">Movies</a></li>
+              <li><a href="./404.html">Music</a></li>
+            </ul>
+            <ul>
+              <li><a href="./404.html">Sport</a></li>
+              <li><a href="./404.html">Toys</a></li>
+              <li><a href="./404.html">Travel</a></li>
+              <li><a href="./404.html">Women's Fashion</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="about">
+          <h3>
+            About
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <ul class="about-menu">
+            <li><a href="./404.html">About Us</a></li>
+            <li><a href="./404.html">Delivery</a></li>
+            <li><a href="./404.html">Testimonials</a></li>
+            <li><a href="./404.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="social">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com">
+                <i class="fab fa-facebook-f"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.ca">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- // Footer -->
+
+    <!-- Import basic functionality -->
+    <script src="js/basic.js"></script>
+
+    <!-- Link special page scripts -->
+    <script src="js/pdp.js"></script>
+  </body>
+</html>

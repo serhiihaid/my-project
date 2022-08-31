@@ -1,0 +1,1030 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OSF Academy</title>
+
+    <link rel="stylesheet" href="./css/main.min.css" />
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+    <!-- Link css styles -->
+    <link rel="stylesheet" href="./css/index.css" />
+
+    <!-- Libs -->
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick.css"
+    />
+
+    <!-- Link Fontawesome icons -->
+    <script
+      src="https://kit.fontawesome.com/0d17482471.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <!-- Overlay -->
+    <div id="overlay"></div>
+
+    <!-- Cookies -->
+    <div class="cookie-consent-modal">
+      <div class="content">
+        <h6>This website uses cookies</h6>
+        <p>
+          OSF uses its own and third-party cookies for statistical purposes, to
+          know your preferences, for website performance and interaction with
+          social media offering publicity tailored to your interests. If you
+          continue browsing, we consider that you accept its use.<br />
+          You can expand this information consulting our
+          <a href="#">Cookies Policy Page</a>.
+          <span id="close-cookies"><i class="fas fa-times"></i></span>
+        </p>
+        <button class="btn accept">accept</button>
+      </div>
+    </div>
+    <script src="./js/cookies.js"></script>
+
+    <!-- Sign In modal -->
+    <form id="signinForm">
+      <h3>Sign in</h3>
+
+      <label for="email">Email</label>
+      <input
+        type="email"
+        name="email"
+        pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,}$"
+        required
+      />
+
+      <div class="forgot">
+        <label for="password">Password</label>
+        <a href="#">forgot password</a>
+      </div>
+      <div class="password">
+        <span class="showPassword">
+          <i class="far fa-eye"></i>
+        </span>
+        <!-- At least 6 characters length, contain 1 numeric, 1 uppercase letter, 1 special character -->
+        <input
+          type="password"
+          name="password"
+          pattern="(?=.*\d)(?=.*[!#$%&'()*+,-./:;<=>?@[\]^_`{|}~])(?=.*[A-Z]).{6,}"
+          required
+        />
+      </div>
+
+      <input type="submit" value="Login" id="login" />
+      <a href="#" class="register">I don't have an account</a>
+    </form>
+
+    <!-- Header -->
+
+    <header>
+      <div class="wrapper">
+        <button id="hamburger">
+          <span class="open active">
+            <i class="fas fa-bars"></i>
+          </span>
+          <span class="close">
+            <i class="fas fa-times"></i>
+          </span>
+        </button>
+
+        <a href="./index.html" class="logo">
+          <img src="./img/home/logo.png" alt="logo" />
+          <div>
+            <h1>OSF</h1>
+            <h2>Academy</h2>
+          </div>
+        </a>
+        <div class="menu-btn"></div>
+        <nav>
+          <ul class="nav-main">
+            <li class="menu-open">
+              <h2>Services</h2>
+              <!-- Menu -->
+              <div class="menu">
+                <div class="wrapper">
+                  <div class="prod-cat">
+                    <h3>
+                      PRODUCT CATEGORIES
+                      <span class="arrow-down">&#9660;</span>
+                    </h3>
+                    <div>
+                      <ul>
+                        <li><a href="./404.html">Accessories</a></li>
+                        <li><a href="./404.html">Alcohol</a></li>
+                        <li><a href="./404.html">Art</a></li>
+                        <li><a href="./404.html">Books</a></li>
+                        <li><a href="./404.html">Drink</a></li>
+                        <li><a href="./404.html">Electronics</a></li>
+                        <li><a href="./404.html">Flowers & Plants</a></li>
+                        <li><a href="./404.html">Food</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="./404.html">Gadgets</a></li>
+                        <li><a href="./404.html">Garden</a></li>
+                        <li><a href="./404.html">Grocery</a></li>
+                        <li><a href="./404.html">Home</a></li>
+                        <li><a href="./404.html">Jewerly</a></li>
+                        <li><a href="./404.html">Kids & Baby</a></li>
+                        <li><a href="./404.html">Men's Fashion</a></li>
+                        <li><a href="./404.html">Mobile</a></li>
+                      </ul>
+                      <ul>
+                        <li><a href="./404.html">Motorcycles</a></li>
+                        <li><a href="./404.html">Movies</a></li>
+                        <li><a href="./404.html">Music</a></li>
+                        <li><a href="./404.html">Office</a></li>
+                        <li><a href="./404.html">Pets</a></li>
+                        <li><a href="./404.html">Romantic</a></li>
+                        <li><a href="./404.html">Sport</a></li>
+                        <li><a href="./404.html">Toys</a></li>
+                      </ul>
+                    </div>
+                  </div>
+                  <div class="sale">
+                    <h3>
+                      SALE
+                      <span class="arrow-down">&#9660;</span>
+                    </h3>
+                    <ul>
+                      <li><a href="./404.html">Accessories</a></li>
+                      <li><a href="./404.html">Alcohol</a></li>
+                      <li><a href="./404.html">Art</a></li>
+                      <li><a href="./404.html">Books</a></li>
+                      <li><a href="./404.html">Drink</a></li>
+                      <li><a href="./404.html">Electronics</a></li>
+                      <li><a href="./404.html">Flowers & Plants</a></li>
+                      <li><a href="./404.html">Food</a></li>
+                    </ul>
+                  </div>
+                  <img src="img/home/navbanner.png" alt="navbanner" />
+                </div>
+              </div>
+            </li>
+            <li>
+              <h2>Company</h2>
+            </li>
+            <li>
+              <h2>Library</h2>
+            </li>
+            <li>
+              <h2>Contact Us</h2>
+            </li>
+          </ul>
+
+          <li class="options">
+            <select name="" id="">
+              <option value="">EN</option>
+              <option value="">FR</option>
+              <option value="">UA</option>
+            </select>
+
+            <select name="" id="">
+              <option value="">$US</option>
+              <option value="">EUR</option>
+              <option value="">UAH</option>
+            </select>
+          </li>
+
+          <ul class="nav-manage">
+            <li>
+              <button>
+                <i class="fa-solid fa-magnifying-glass"></i>
+              </button>
+            </li>
+            <li>
+              <button id="openSignin">
+                <i class="fa-regular fa-user"></i>
+              </button>
+            </li>
+            <li>
+              <button id="wishlist">
+                <i class="fa-regular fa-heart"></i>
+                <span
+                  id="wishlistAmount"
+                  class="login-cart__counter login-cart__counter_wishlist"
+                  >1</span
+                >
+              </button>
+            </li>
+            <li>
+              <a href="./cart.html" id="cart">
+                <i class="fas fa-shopping-bag"></i>
+                <span
+                  id="cartAmount"
+                  class="login-cart__counter login-cart__counter_cart"
+                  >2</span
+                >
+              </a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <!-- Main -->
+    <main class="main">
+      <!-- Slider and Facebook-follow -->
+      <div class="slider-facebook container">
+        <div class="row">
+          <div
+            class="slider-bootstrap carousel slide col-12 col-xl-9"
+            data-right="carousel"
+            id="slides"
+          >
+            <ul class="carousel-indicators slider-bootstrap__indicators">
+              <li class="active" data-target="#slides" data-slide-to="0"></li>
+              <li data-target="#slides" data-slide-to="1"></li>
+              <li data-target="#slides" data-slide-to="2"></li>
+            </ul>
+            <div class="carousel-inner">
+              <div
+                class="carousel-item slider-bootstrap__item slider-bootstrap__item_one active"
+              >
+                <p class="slider-bootstrap__heading">Control and manage any</p>
+                <p
+                  class="slider-bootstrap__heading slider-bootstrap__heading_last-child"
+                >
+                  device with cloud solutions
+                </p>
+                <p class="slider-bootstrap__subtitle">
+                  Improve business performance and the user experience
+                </p>
+                <p
+                  class="slider-bootstrap__subtitle slider-bootstrap__subtitle_last-child"
+                >
+                  with the right mix of IoT technology and processes
+                </p>
+                <a class="slider-bootstrap__link" href="./clp.html"
+                  >View more</a
+                >
+              </div>
+              <div
+                class="carousel-item slider-bootstrap__item slider-bootstrap__item_two"
+              >
+                <p class="slider-bootstrap__heading">Control and manage any</p>
+                <p
+                  class="slider-bootstrap__heading slider-bootstrap__heading_last-child"
+                >
+                  device with cloud solutions
+                </p>
+                <p class="slider-bootstrap__subtitle">
+                  Improve business performance and the user experience
+                </p>
+                <p
+                  class="slider-bootstrap__subtitle slider-bootstrap__subtitle_last-child"
+                >
+                  with the right mix of IoT technology and processes
+                </p>
+                <a class="slider-bootstrap__link" href="./clp.html"
+                  >View more</a
+                >
+              </div>
+              <div
+                class="carousel-item slider-bootstrap__item slider-bootstrap__item_three"
+              >
+                <p class="slider-bootstrap__heading">Control and manage any</p>
+                <p
+                  class="slider-bootstrap__heading slider-bootstrap__heading_last-child"
+                >
+                  device with cloud solutions
+                </p>
+                <p class="slider-bootstrap__subtitle">
+                  Improve business performance and the user experience
+                </p>
+                <p
+                  class="slider-bootstrap__subtitle slider-bootstrap__subtitle_last-child"
+                >
+                  with the right mix of IoT technology and processes
+                </p>
+                <a class="slider-bootstrap__link" href="./clp.html"
+                  >View more</a
+                >
+              </div>
+            </div>
+          </div>
+          <aside class="facebook-follow d-xl-flex col-xl-3">
+            <div class="facebook-follow__window">
+              <p class="facebook-follow__sale">55%</p>
+              <p class="facebook-follow__description">Summer sales</p>
+            </div>
+            <p class="facebook-follow__heading">Follow us on Facebook</p>
+            <p class="facebook-follow__subtitle">
+              Sed ut perspiciatis unde omnis iste natus error sit
+            </p>
+            <a
+              class="facebook-follow__link"
+              target="_blank"
+              href="https://www.facebook.com"
+              ><i
+                class="fa fa-facebook facebook-follow__icon"
+                aria-hidden="true"
+              ></i
+              >Follow</a
+            >
+          </aside>
+        </div>
+      </div>
+      <!-- // Slider and Facebook-follow -->
+      <!-- Products -->
+      <div class="products">
+        <div class="container">
+          <div class="products__head-whrapper">
+            <div class="products__line"></div>
+            <h2 class="products__heading">Popular Items</h2>
+            <div class="products__line"></div>
+          </div>
+          <div class="row products__row">
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_one">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Kristina Dam Oak Table With <br />
+                  White Marble Top
+                </div>
+                <div class="products__price">$ 799.55</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <a
+                class="products__photo products__photo_two d-block"
+                href="pdp.html"
+              >
+              </a>
+              <div class="products__description">
+                <a class="products__name products__name_link" href="pdp.html"
+                  >Hay - About A Lounge
+                  <br />
+                  Chair AAL 93</a
+                >
+                <div class="products__buy-now">
+                  <a class="products__buy-now_price" href="pdp.html">$659.55</a>
+                  <button class="products__buy-now_button products__button_buy">
+                    Buy now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_three">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Activate Facial Mask and <br />
+                  Charcoal Soap
+                </div>
+                <div class="products__price">$ 129.55</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_four">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Cocktail Table Walnut <br />
+                  | YES
+                </div>
+                <div class="products__price">$ 299.99</div>
+              </div>
+            </div>
+          </div>
+          <div class="row products__row">
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_five">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Hay - About A Lounge <br />
+                  Chair AAL 93
+                </div>
+                <div class="products__price">$ 659.55</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_six">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">TORY DESK CALENDAR</div>
+                <div class="products__price">$ 410.99</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__photo products__photo_seven">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  CH445 Wing Chair on <br />
+                  SUITE NY
+                </div>
+                <div class="products__price">$ 330.55</div>
+              </div>
+            </div>
+            <div class="col-12 col-md-6 col-xl-3 products__item">
+              <div class="products__gradient">
+                <div class="products__gradient_text">
+                  My dragons are misbehaving again. Unbelieveable!
+                </div>
+                <img
+                  class="products__gradient_image"
+                  src="img/icons/gradient-person.png"
+                  alt="person"
+                />
+                <div class="products__gradient_counter">5h ago</div>
+              </div>
+              <div
+                class="products__photo products__photo_full products__photo_eight"
+              ></div>
+            </div>
+          </div>
+          <!-- Lower resolution slider -->
+          <div class="row products__row products__slider">
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__hover">
+                <button class="products__button products__button_buy">
+                  <i class="fa fa-plus" aria-hidden="true"></i>
+                </button>
+                <button class="products__button products__button_like">
+                  <i class="fa fa-heart" aria-hidden="true"></i>
+                </button>
+              </div>
+              <div class="products__photo products__photo_one"></div>
+              <div class="products__description">
+                <div class="products__name">
+                  Kristina Dam Oak Table With <br />
+                  White Marble Top
+                </div>
+                <div class="products__price">$ 799.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <a
+                class="products__photo products__photo_two d-block"
+                href="pdp.html"
+              >
+              </a>
+              <div class="products__description">
+                <a class="products__name products__name_link" href="pdp.html"
+                  >Hay - About A Lounge
+                  <br />
+                  Chair AAL 93</a
+                >
+                <div class="products__buy-now">
+                  <a class="products__buy-now_price" href="pdp.html">$659.55</a>
+                  <button class="products__buy-now_button products__button_buy">
+                    Buy now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_three">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Activate Facial Mask and <br />
+                  Charcoal Soap
+                </div>
+                <div class="products__price">$ 129.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_four">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Cocktail Table Walnut <br />
+                  | YES
+                </div>
+                <div class="products__price">$ 299.99</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_five">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Hay - About A Lounge <br />
+                  Chair AAL 93
+                </div>
+                <div class="products__price">$ 659.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_six">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">TORY DESK CALENDAR</div>
+                <div class="products__price">$ 410.99</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_seven">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  CH445 Wing Chair on <br />
+                  SUITE NY
+                </div>
+                <div class="products__price">$ 330.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__gradient">
+                <div class="products__gradient_text">
+                  My dragons are misbehaving again. Unbelieveable!
+                </div>
+                <img
+                  class="products__gradient_image"
+                  src="img/icons/gradient-person.png"
+                  alt="person"
+                />
+                <div class="products__gradient_counter">5h ago</div>
+              </div>
+              <div
+                class="products__photo products__photo_full products__photo_eight"
+              ></div>
+            </div>
+          </div>
+          <!-- Lower resolution slider -->
+          <div class="row products__row" id="loaded-products"></div>
+          <button class="products__load-more" id="btn-main">
+            Load more
+            <img
+              class="products__load-more_image"
+              src="img/icons/load-more.png"
+              alt="load-more"
+            />
+          </button>
+        </div>
+      </div>
+      <!-- // Products -->
+
+      <!-- OSF Banner -->
+      <div class="osf-banner">
+        <h3 class="osf-banner__heading">Banner OSF Theme</h3>
+        <p class="osf-banner__subtitle">
+          Sed ut perspiciatis unde omnis iste natus error sit voluptatem
+          accusantium
+        </p>
+      </div>
+      <!-- // OSF Banner -->
+
+      <!-- Featured Products -->
+      <div class="products slider-slick">
+        <div class="container">
+          <div class="slider-slick__head-whrapper">
+            <h2 class="slider-slick__heading">Featured Products</h2>
+            <p class="slider-slick__subtitle">
+              Unde omnis iste natus error sit voluptatem
+            </p>
+            <div class="slider-slick__arrows">
+              <div class="slider-slick__lines"></div>
+            </div>
+          </div>
+          <div class="row products__row slider-slick__slider">
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_one">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Kristina Dam Oak Table With <br />
+                  White Marble Top
+                </div>
+                <div class="products__price">$ 799.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <a
+                class="products__photo products__photo_two d-block"
+                href="pdp.html"
+              >
+              </a>
+              <div class="products__description">
+                <a class="products__name products__name_link" href="pdp.html"
+                  >Hay - About A Lounge
+                  <br />
+                  Chair AAL 93</a
+                >
+                <div class="products__buy-now">
+                  <a class="products__buy-now_price" href="pdp.html">$659.55</a>
+                  <button class="products__buy-now_button products__button_buy">
+                    Buy now
+                  </button>
+                </div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_three">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Activate Facial Mask and <br />
+                  Charcoal Soap
+                </div>
+                <div class="products__price">$ 129.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_four">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Cocktail Table Walnut <br />
+                  | YES
+                </div>
+                <div class="products__price">$ 299.99</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_five">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  Hay - About A Lounge <br />
+                  Chair AAL 93
+                </div>
+                <div class="products__price">$ 659.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_six">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">TORY DESK CALENDAR</div>
+                <div class="products__price">$ 410.99</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__photo products__photo_seven">
+                <div class="products__hover">
+                  <button class="products__button products__button_buy">
+                    <i class="fa fa-plus" aria-hidden="true"></i>
+                  </button>
+                  <button class="products__button products__button_like">
+                    <i class="fa fa-heart" aria-hidden="true"></i>
+                  </button>
+                </div>
+              </div>
+              <div class="products__description">
+                <div class="products__name">
+                  CH445 Wing Chair on <br />
+                  SUITE NY
+                </div>
+                <div class="products__price">$ 330.55</div>
+              </div>
+            </div>
+            <div
+              class="col-12 col-md-6 col-xl-3 products__item slider-slick__item"
+            >
+              <div class="products__gradient">
+                <div class="products__gradient_text">
+                  My dragons are misbehaving again. Unbelieveable!
+                </div>
+                <img
+                  class="products__gradient_image"
+                  src="img/icons/gradient-person.png"
+                  alt="person"
+                />
+                <div class="products__gradient_counter">5h ago</div>
+              </div>
+              <div
+                class="products__photo products__photo_full products__photo_eight"
+              ></div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Featured Products -->
+
+      <!-- Services -->
+      <div class="sevices-static">
+        <div class="container">
+          <div class="row sevices-static__whrapper">
+            <div class="col-md-4 sevices-static__facility">
+              <img
+                class="sevices-static__image"
+                src="img/home/benefits/delivery.svg"
+                alt="facility"
+              />
+              <div class="sevices-static__description">
+                <p class="sevices-static__title">Focus</p>
+                <p class="sevices-static__subtitle">
+                  Our unwavering focus on superior service delivery and building
+                  next generation competencies
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 sevices-static__facility">
+              <img
+                class="sevices-static__image"
+                src="img/home/benefits/clipboard.svg"
+                alt="facility"
+              />
+              <div class="sevices-static__description">
+                <p class="sevices-static__title">Method</p>
+                <p class="sevices-static__subtitle">
+                  A standardized methodology designed to deliver measurable
+                  business results and predictable costs
+                </p>
+              </div>
+            </div>
+            <div class="col-md-4 sevices-static__facility">
+              <img
+                class="sevices-static__image"
+                src="img/home/benefits/recycle.svg"
+                alt="facility"
+              />
+              <div class="sevices-static__description">
+                <p class="sevices-static__title">Knowledge</p>
+                <p class="sevices-static__subtitle">
+                  A highly skilled, proactive workforce that reliably improves
+                  each client’s ROI while mitigating their business risk
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- // Services -->
+    </main>
+    <!-- // Main -->
+
+    <!-- Footer -->
+    <footer>
+      <div class="wrapper">
+        <div class="contact">
+          <span
+            >© Copyright <span id="year"></span>.<br />
+            All Rights Reserved.<br />
+            <a href="./release.html">Release Date</a>
+          </span>
+          <h3>
+            Contact
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <ul class="contact-menu">
+            <li>
+              Headquarters:<br />
+              5600, Blvd. des Galeries, Bur 530 Québec, Québec G2K 2H6
+            </li>
+            <li>
+              <a href="mailto:contact@osf-global.com">contact@osf-global.com</a>
+            </li>
+            <li><a href="tel:+1-888-548-4344">+1 (888) 548-4344</a></li>
+          </ul>
+        </div>
+        <div class="categories">
+          <h3>
+            Categories
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <div class="categories-menu">
+            <ul>
+              <li><a href="./404.html">Alcohol</a></li>
+              <li><a href="./404.html">Art</a></li>
+              <li><a href="./404.html">Books</a></li>
+              <li><a href="./404.html">Drink</a></li>
+              <li><a href="./404.html">Electronics</a></li>
+            </ul>
+            <ul>
+              <li><a href="./404.html">Home</a></li>
+              <li><a href="./404.html">Jewerly</a></li>
+              <li><a href="./404.html">Kids & Baby</a></li>
+              <li><a href="./404.html">Men's Fashion</a></li>
+              <li><a href="./404.html">Mobile</a></li>
+              <li><a href="./404.html">Motorcycles</a></li>
+              <li><a href="./404.html">Movies</a></li>
+              <li><a href="./404.html">Music</a></li>
+            </ul>
+            <ul>
+              <li><a href="./404.html">Sport</a></li>
+              <li><a href="./404.html">Toys</a></li>
+              <li><a href="./404.html">Travel</a></li>
+              <li><a href="./404.html">Women's Fashion</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="about">
+          <h3>
+            About
+            <span class="arrow-down">&#9660;</span>
+          </h3>
+          <ul class="about-menu">
+            <li><a href="./404.html">About Us</a></li>
+            <li><a href="./404.html">Delivery</a></li>
+            <li><a href="./404.html">Testimonials</a></li>
+            <li><a href="./404.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="social">
+          <ul>
+            <li>
+              <a href="https://www.facebook.com" target="_blank">
+                <i class="fab fa-facebook-f" :></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.google.com" target="_blank">
+                <i class="fab fa-google-plus-g"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://twitter.com" target="_blank">
+                <i class="fab fa-twitter"></i>
+              </a>
+            </li>
+            <li>
+              <a href="https://www.pinterest.ca" target="_blank">
+                <i class="fab fa-pinterest-p"></i>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <!-- // Footer -->
+
+    <!-- Import basic functionality -->
+    <script src="./js/basic.js"></script>
+
+    <!-- Vendor Scripts -->
+    <script src="./js/libs.min.js"></script>
+
+    <!-- Custom Scripts -->
+    <script src="./js/main.js"></script>
+
+    <!-- Load more -->
+    <script src="./js/load-more.js"></script>
+
+    <!-- Connect to Json file -->
+    <script src="./data.json"></script>
+  </body>
+</html>
